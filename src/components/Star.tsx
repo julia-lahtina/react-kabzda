@@ -1,7 +1,10 @@
 import React from 'react';
 
-export const Star = () => {
+type StarPropsType = {
+    selected: boolean
+}
+export const Star = (props: StarPropsType) => {
     return (
-        <div>star</div>
+            <span><b>star</b> </span>
     );
 };
