@@ -10,7 +10,8 @@ function App() {
         <div className="App">
             <Title/>
             <Rating value={3}/>
-            <Accordion/>
+            <Accordion title={"Menü"}/>
+            <Accordion title={"Films"}/>
             <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
