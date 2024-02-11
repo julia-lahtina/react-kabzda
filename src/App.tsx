@@ -3,6 +3,8 @@ import './App.css';
 import {Button} from "./components/Button";
 import {Star} from "./components/Star";
 import {Title} from "./components/Title";
+import {AccordionTitle} from "./components/AccordionTitle";
+import {AccordionBody} from "./components/AccordionBody";
 
 function App() {
     return (
@@ -11,6 +13,7 @@ function App() {
             <Rating/>
             <Accordion/>
             <Rating/>
+
             <Button title={"ON"} isOn={true}/>
             <Button title={"OFF"} isOn={false}/>
         </div>
@@ -30,14 +33,11 @@ function Rating() {
 }
 
 function Accordion() {
+    console.log("Accordion rendering")
     return (
         <div>
-            <h3>Menü</h3>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
+            <AccordionTitle/>
+            <AccordionBody/>
         </div>
     )
 }
