@@ -4,7 +4,11 @@ type StarPropsType = {
     selected: boolean
 }
 export const Star = (props: StarPropsType) => {
-    return (
-            <span><b>star</b> </span>
-    );
+    console.log("Star rendering")
+
+    if (props.selected) {
+        return <span><b>star</b> </span>;
+    } else {
+        return <span>star </span>
+    }
 };
