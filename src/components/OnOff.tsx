@@ -5,8 +5,11 @@ export type OnOffPropsType = {
 }
 
 export const OnOff = (props: OnOffPropsType) => {
+    console.log("OnOff rendering")
 
     let [on, setOn] = useState(false) // hook
+
+    console.log("on: " + on)
 
     const onStyle = {
         width: "30px",
@@ -23,7 +26,7 @@ export const OnOff = (props: OnOffPropsType) => {
         display: "inline-block",
         marginLeft: "3px",
         padding: "2px",
-        backgroundColor: on ? "red" : "white"
+        backgroundColor: !on ? "red" : "white"
     };
     const indicatorStyle = {
         width: "10px",

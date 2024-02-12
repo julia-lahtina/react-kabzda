@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import {Button} from "./components/Button";
 import {Title} from "./components/Title";
 import {Rating} from "./components/Rating";
 import {Accordion} from "./components/Accordion";
@@ -20,9 +19,10 @@ function App() {
             <Rating value={5}/>
 
             <OnOff/>
+            <OnOff/>
+            <OnOff/>
+            <OnOff/>
 
-            {/*            <Button title={"ON"} isOn={true}/>
-            <Button title={"OFF"} isOn={false}/>*/}
         </div>
     );
 }
