@@ -4,6 +4,7 @@ import {Button} from "./components/Button";
 import {Title} from "./components/Title";
 import {Rating} from "./components/Rating";
 import {Accordion} from "./components/Accordion";
+import {OnOff} from "./components/OnOff";
 
 function App() {
     return (
@@ -18,9 +19,10 @@ function App() {
             <Rating value={4}/>
             <Rating value={5}/>
 
+            <OnOff on={true}/>
 
-            <Button title={"ON"} isOn={true}/>
-            <Button title={"OFF"} isOn={false}/>
+{/*            <Button title={"ON"} isOn={true}/>
+            <Button title={"OFF"} isOn={false}/>*/}
         </div>
     );
 }
