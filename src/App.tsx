@@ -5,6 +5,7 @@ import {Rating} from "./components/Rating";
 import {Accordion} from "./components/Accordion";
 import {OnOff} from "./components/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating";
 
 function App() {
     return (
@@ -16,6 +17,8 @@ function App() {
 
             <UncontrolledAccordion title={"Version 1"}/>
             <UncontrolledAccordion title={"Version 2"}/>
+
+            <UncontrolledRating/>
 
             <Rating value={1}/>
             <Rating value={2}/>
