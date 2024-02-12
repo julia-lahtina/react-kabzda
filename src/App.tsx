@@ -8,11 +8,11 @@ import {Accordion} from "./components/Accordion";
 function App() {
     return (
         <div className="App">
-            <Title/>
-            <Rating value={3}/>
-            <Accordion title={"Menü"}/>
-            <Accordion title={"Films"}/>
-            <Rating value={0}/>
+            {/*<Title title={"This is APP component"}/>
+            <Rating value={3}/>*/}
+            <Accordion title={"Menü"} collapsed={true}/>
+            <Accordion title={"Films"} collapsed={false}/>
+{/*            <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
@@ -20,7 +20,7 @@ function App() {
             <Rating value={5}/>
 
             <Button title={"ON"} isOn={true}/>
-            <Button title={"OFF"} isOn={false}/>
+            <Button title={"OFF"} isOn={false}/>*/}
         </div>
     );
 }

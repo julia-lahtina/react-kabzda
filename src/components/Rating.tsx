@@ -1,7 +1,10 @@
 import {Star} from "./Star";
 import React from "react";
 
-export const Rating = (props: any) => {
+type RatingPropsType = {
+    value: number
+}
+export const Rating = (props: RatingPropsType) => {
     if (props.value === 1) {
         return (
             <div>
@@ -58,13 +61,13 @@ export const Rating = (props: any) => {
         )
     }
 
-        return (
-            <div>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-            </div>
-        )
+    return (
+        <div>
+            <Star selected={false}/>
+            <Star selected={false}/>
+            <Star selected={false}/>
+            <Star selected={false}/>
+            <Star selected={false}/>
+        </div>
+    )
 }
