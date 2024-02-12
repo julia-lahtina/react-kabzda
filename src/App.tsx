@@ -19,9 +19,9 @@ function App() {
             <Rating value={4}/>
             <Rating value={5}/>
 
-            <OnOff on={true}/>
+            <OnOff/>
 
-{/*            <Button title={"ON"} isOn={true}/>
+            {/*            <Button title={"ON"} isOn={true}/>
             <Button title={"OFF"} isOn={false}/>*/}
         </div>
     );
