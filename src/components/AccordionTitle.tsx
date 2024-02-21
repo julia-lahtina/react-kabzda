@@ -1,11 +1,14 @@
 import React from 'react';
+import {AccordionBody} from './AccordionBody';
 
 type AccordionTitlePropsType = {
     title: string
-    onClick: () => void
+    collapsed: boolean
+    onClick: (collapsed: boolean) => void
 }
 export const AccordionTitle = (props: AccordionTitlePropsType) => {
-    return <h3 onClick={() => {
-        props.onClick()
-    }}>--- {props.title} ---</h3>;
+    debugger
+    return <h3 onClick={() => props.onClick(!props.collapsed)}>
+        --- {props.title} ---
+    </h3>;
 };
