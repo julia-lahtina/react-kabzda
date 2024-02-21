@@ -11,7 +11,7 @@ export const Accordion = (props: AccordionPropsType) => {
 
     return (
         <div>
-            <AccordionTitle title={props.title}/>
+            <AccordionTitle onClick={() => {}} title={props.title}/>
             {!props.collapsed && <AccordionBody/>}
         </div>
     )
