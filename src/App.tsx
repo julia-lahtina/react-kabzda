@@ -11,7 +11,7 @@ function App() {
 
     let [ratingValue, setRatingValue] = useState<RatingValuePropsType>(0)
     let [accordCollapsed, setAccordCollapsed] = useState<boolean>(false)
-    let [on, setOn] = useState<boolean>(false) // hook
+    let [switchOn, setSwitchOn] = useState<boolean>(false) // hook
 
     return (
         <div className="App">
@@ -20,7 +20,7 @@ function App() {
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            <OnOff valueOnOff={on} onChange={setOn}/>
+            <OnOff valueOnOff={switchOn} onChange={setSwitchOn}/>
 
             {/*<Title title={"This is APP component"}/>
             <Rating value={3}/>*/}
