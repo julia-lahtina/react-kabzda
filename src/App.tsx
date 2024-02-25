@@ -6,6 +6,7 @@ import {UncontrolledAccordion} from './components/UncontrolledAccordion';
 import {UncontrolledRating} from './components/UncontrolledRating';
 import {Rating, RatingValuePropsType} from './components/Rating';
 import {OnOff, OnOffPropsType} from './components/OnOff';
+import {UncontrolledOnOff} from './components/UncontrolledOnOff';
 
 function App() {
 
@@ -20,7 +21,9 @@ function App() {
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            <OnOff valueOnOff={switchOn} onChange={setSwitchOn}/>
+  {/*          <OnOff valueOnOff={switchOn} onChange={setSwitchOn}/>*/}
+
+            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
 
             {/*<Title title={"This is APP component"}/>
             <Rating value={3}/>*/}
