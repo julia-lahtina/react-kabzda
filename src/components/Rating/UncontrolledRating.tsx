@@ -1,4 +1,4 @@
-import {Star} from "./Star";
+import {Star} from "../Star";
 import React, {useState} from "react";
 
 type RatingPropsType = {

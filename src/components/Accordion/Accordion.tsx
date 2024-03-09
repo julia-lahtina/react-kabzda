@@ -1,20 +1,19 @@
-import {AccordionTitle} from "./AccordionTitle";
-import {AccordionBody} from "./AccordionBody";
-import React, {useState} from "react";
+import {AccordionTitle} from '../AccordionTitle';
+import {AccordionBody} from '../AccordionBody';
+import React from 'react';
 
 export type AccordionPropsType = {
     title: string
-   // collapsed?: boolean
+    collapsed: boolean
+    onClick: (collapsed: boolean) => void
 }
-export const UncontrolledAccordion = (props: AccordionPropsType) => {
-    console.log("Accordion rendering")
-
-    let [collapsed, setCollapsed] = useState(false)
+export const Accordion = (props: AccordionPropsType) => {
+    console.log('Accordion rendering')
 
     return (
         <div>
-{/*            <AccordionTitle onClick={() => {setCollapsed(!collapsed)}} title={props.title}/>
-            {!collapsed && <AccordionBody/>}*/}
+            <AccordionTitle onClick={props.onClick} collapsed={props.collapsed} title={props.title}/>
+            {!props.collapsed && <AccordionBody/>}
         </div>
     )
 
