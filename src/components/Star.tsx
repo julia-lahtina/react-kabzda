@@ -1,5 +1,5 @@
 import React from 'react';
-import {RatingValuePropsType} from './Rating';
+import {RatingValuePropsType} from './Rating/Rating';
 
 type StarPropsType = {
     value: RatingValuePropsType
