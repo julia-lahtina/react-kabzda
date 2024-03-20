@@ -28,13 +28,9 @@ export const Select = (props: SelectPropsType) => {
         setActive(!active)
     }
 
-    const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
-
-    }
-
 
     return (
-        <div className={s.select} tabIndex={0} onKeyUp={onKeyUp}>
+        <div className={s.select} tabIndex={0}>
             <span className={s.main} onClick={toggleItems}>
                 {selectedItem && selectedItem.title}</span>
             {
