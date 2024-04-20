@@ -1,0 +1,96 @@
+.button {
+    background-color: white;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: greenyellow;
+    }
+}
+
+.button img {
+    width: 50px;
+    height: 50px;
+}
+
+.clockImg {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.imgM::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 92%;
+    left: 12.5%
+}
+
+.hours {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 10px;
+    height: 50px;
+    top: 84%;
+    left: 12.5%;
+}
+
+.min {
+    content: '';
+    position: absolute;
+    background-color: #32c721;
+    width: 6px;
+    height: 70px;
+    top: 81%;
+    left: 12.5%
+}
+
+.sec {
+    content: '';
+    position: absolute;
+    background-color: #f10d0d;
+    width: 3px;
+    height: 90px;
+    top: 78%;
+    left: 12.5%
+}
+
+.buttonWrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.timeWrapper {
+    max-width: 200px;
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 50px;
+}
+
+.analogClock {
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.analogClock2 {
+    border: 2px solid black;
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 250px;
+    left: 88px
+}
