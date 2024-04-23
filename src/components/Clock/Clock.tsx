@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
-import s from './clockStyle.module.css'
+import {AnalogClockView} from './AnalogClockView';
+import {DigitalClockView} from './DigitalClockView';
 
 
-type ClockPropsType = {}
-
-// Это утилитная, т.е. вспомогательная функция
-const get2digitsString = (number: number) => number < 10 ? '0' + number : number // функция не зависит от стейтов и юзэффектов, поэтому выносим сюда наверх
+type ClockPropsType = {
+    mode?: 'digital' | 'analog' | undefined
+}
 
 
 export const Clock = (props: ClockPropsType) => {
@@ -24,17 +24,28 @@ export const Clock = (props: ClockPropsType) => {
         }
     }, []);
 
+
+    let view;
+
+    switch (props.mode) {
+        case 'analog':
+            view = <AnalogClockView date={date}/>;
+            break;
+        case 'digital':
+        default:
+            view = <DigitalClockView date={date}/>
+    }
+
+
     return (
-
         <div>
-
-            <div className={s.timeWrapper}>
-                <span>{get2digitsString(date.getHours())}</span>
-                :
-                <span>{get2digitsString(date.getMinutes())}</span>
-                :
-                <span>{get2digitsString(date.getSeconds())}</span>
-            </div>
+            {view}
         </div>
     );
 };
+
+
+export type ClockViewPropsType = {
+    date: Date
+}
+

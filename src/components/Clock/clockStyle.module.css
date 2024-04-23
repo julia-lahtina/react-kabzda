@@ -1,96 +1,37 @@
-.button {
-    background-color: white;
-    border: none;
-
-    &:hover {
-        cursor: pointer;
-        background-color: greenyellow;
-    }
+.clock {
+    width: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.button img {
+.clock .digital-clock {
+    padding: 10px;
+}
+.clock .analog-clock {
+    width: 100px;
+    height: 100px;
+    border: solid 1px #000;
+    border-radius: 50%;
+    position: relative;
+    background: #fff;
+}
+.clock .analog-clock .dial {
+    position: absolute;
+    left: 50%;
     width: 50px;
     height: 50px;
+    transform-origin: bottom left;
 }
-
-.clockImg {
-    width: 400px;
-    height: 400px;
-    position: relative;
+.clock .analog-clock .dial.seconds {
+    border-left: solid 1px green;
 }
-
-.imgM::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    position: absolute;
-    border-radius: 50%;
-    top: 92%;
-    left: 12.5%
+.clock .analog-clock .dial.minutes {
+    border-left: solid 1px #c00;
 }
-
-.hours {
-    content: '';
-    position: absolute;
-    background-color: black;
-    width: 10px;
-    height: 50px;
-    top: 84%;
-    left: 12.5%;
-}
-
-.min {
-    content: '';
-    position: absolute;
-    background-color: #32c721;
-    width: 6px;
-    height: 70px;
-    top: 81%;
-    left: 12.5%
-}
-
-.sec {
-    content: '';
-    position: absolute;
-    background-color: #f10d0d;
-    width: 3px;
-    height: 90px;
-    top: 78%;
-    left: 12.5%
-}
-
-.buttonWrapper {
-    display: flex;
-    gap: 50px;
-}
-
-.timeWrapper {
-    max-width: 200px;
-    width: 100%;
-    min-height: 200px;
-    height: 100%;
-    margin-bottom: 10px;
-    text-align: center;
-    padding-top: 100px;
-    font-size: 50px;
-}
-
-.analogClock {
-    border: 2px solid black;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: relative;
-}
-
-.analogClock2 {
-    border: 2px solid black;
-    width: 3px;
-    height: 3px;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 250px;
-    left: 88px
+.clock .analog-clock .dial.hours {
+    width: 35px;
+    height: 35px;
+    top: 15px;
+    border-left: solid 2px #000;
 }
