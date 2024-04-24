@@ -49,3 +49,26 @@ export const SetTimeOutExample = () => {
         <span>Текущее время: {time.getHours()}:{time.getMinutes()}:{time.getSeconds()}</span>
     </>
 }
+
+export const ClearIntervalExample = () => {
+
+    const [counter, setCounter] = useState(1)
+
+    console.log('simple example')
+
+    useEffect(() => {
+        const id = setInterval(() => {
+            console.log(counter + ' ' + 'interval works')
+        }, 1000)
+        console.log(id)
+        return () => {
+            clearInterval(id)
+        }
+    }, [counter]);
+
+
+    return <>
+        Hello, {counter}
+        <button onClick={() => setCounter(counter + 1)}>+</button>
+    </>
+}
